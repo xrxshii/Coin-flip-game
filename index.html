@@ -24,6 +24,15 @@
         decidingResult('tails');
       ">Tails</button>
 
+      <button onclick="
+        gameStats.win = 0;
+        gameStats.lose = 0;
+
+        //resetting the local storage of the game stats 
+        localStorage.removeItem('gameStats');
+        document.getElementById('textDisplay2').textContent = (`Wins: ${gameStats.win}. Losses: ${gameStats.lose}.`)
+      ">Reset score</button>
+
 
       <p class="results" id="textDisplay0"></p>
       <p class="results" id="textDisplay1"></p>
